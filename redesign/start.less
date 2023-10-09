@@ -1,0 +1,90 @@
+@import url(reset.css);
+@import url(common.less);
+
+@col-green: #e7fe55;
+.top-lnk {
+  padding: 23px 51px 72px 51px;
+  display: flex;
+  li:nth-child(1) {
+    flex-grow: 1;
+  }
+  a {
+    color: #fff;
+    font-size: 24px;
+  }
+}
+.div-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  img {
+    width: 127px;
+    height: 127px;
+  }
+  h1 {
+    font-family: "Gilroy-Bold";
+    color: #fff;
+    font-weight: bold;
+    font-size: 66px;
+  }
+}
+.div-cap {
+  padding-top: 64px;
+  padding-left: 46px;
+  h1 {
+    &.green {
+      color: @col-green;
+    }
+    margin: 0;
+    padding: 0;
+    font-size: 43px;
+    line-height: 43px;
+    font-family: "Atyp Display";
+  }
+  p {
+    padding-top: 20px;
+    font-size: 12px;
+  }
+}
+.div-dsc {
+  padding: 20px 0 0 46px;
+  display: flex;
+  flex-direction: row;
+  gap: 23px;
+  li {
+    width: 191px;
+    height: 177px;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 18px;
+    color: #000;
+    font-size: 19px;
+    font-weight: bold;
+  }
+}
+.div-reg {
+  display: flex;
+  justify-content: center;
+  padding: 61px 0;
+  a {
+    color: @col-green;
+    font-size: 21px;
+  }
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+}
+.bg1 {
+  background-image: url("img/bg1.png");
+  background-size: cover;
+  min-height: 100vh;
+}
+.bg2 {
+  background-image: url("img/bg2.svg");
+  background-size: cover;
+  min-height: 100vh;
+}

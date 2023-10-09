@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- для каждой страницы свой less файл. -->
+    <link rel="stylesheet/less" type="text/less" href="start.less" />
+    <!-- Скрипты не трогать -->
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.21/dist/vue.global.js"></script>
+    <script>
+      //скрипты не трограть.
+      window.addEventListener("load", () => {
+        const app = Vue.createApp({
+          methods: {
+            tr(k) {
+              return k;
+            },
+          },
+        });
+        app.mount("#dont_use_this_id_in_style");
+      });
+    </script>
+  </head>
+  <body>
+    <div class="page" id="dont_use_this_id_in_style">
+      <div class="bg1">
+        <div class="bg2">
+          <ul class="top-lnk">
+            <li>
+              <a href="#">KZ</a>
+            </li>
+            <li>
+              <!-- Все русские тексты обернуть в функцию интернационализации tr() -->
+              <a href="#login">{{ tr("Войти") }}</a>
+            </li>
+          </ul>
+          <div class="div-logo">
+            <img src="img/logo.svg" />
+            <h1>Project</h1>
+          </div>
+          <div class="div-cap">
+            <h1 class="green">{{ tr("Скидки.") }}</h1>
+            <h1>
+              {{ tr("Бизнес") }} <br />
+              {{ tr("и не только") }}
+            </h1>
+            <p>
+              {{ tr("Удобный сервис для поиска") }}<br />
+              {{ tr(" лучших скидок") }}
+            </p>
+          </div>
+          <ul class="div-dsc">
+            <li>
+              <span> {{ tr("Что такое Project?") }}</span>
+            </li>
+            <li>
+              <span> {{ tr("Как пользоваться?") }}</span>
+            </li>
+          </ul>
+          <div class="div-reg">
+            <a href="#">{{ tr("Регистрация") }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
